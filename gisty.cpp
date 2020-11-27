@@ -8,10 +8,10 @@ int main() {
     string devicecode = headless::getdevicecode(clientid);
     //cout << "The device code is " + devicecode << endl;
     string authtoken = headless::getauthtoken(devicecode, clientid);
-    cout << "We got the access token: " + authtoken << endl;
+    //cout << "We got the access token: " + authtoken << endl;
     string sentence;
     cout << "Type a sentence here!: ";
-    cin >> sentence;
+    std::getline(std::cin, sentence);
     sentence.erase(std::remove(sentence.begin(), sentence.end(), '\n'), sentence.end());
     cout << "Posting to GitHub" << endl;
     string url = post::post(authtoken, sentence);
