@@ -1,0 +1,1 @@
+option('libinstdir', type: 'string', value: 'share/gistycpp')

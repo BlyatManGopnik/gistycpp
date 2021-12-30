@@ -1,0 +1,3 @@
+[wrap-git]
+url = https://github.com/ArthurSonzogni/nlohmann_json_cmake_fetchcontent
+revision = b48095ee99aff048dc4760dd644b848bc1e6f0c3

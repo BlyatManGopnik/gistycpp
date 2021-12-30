@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cpr/cpr.h>
 #include <nlohmann/json.hpp>
+#include "sleep.hpp"
 using std::cout, std::endl, std::string, std::basic_string;
 namespace headless {
     bool authtokendone;
@@ -34,7 +35,7 @@ namespace headless {
                 access = tokenjson["access_token"];
                 authtokendone = true;
 	        } catch (nlohmann::detail::type_error e){
-                std::this_thread::sleep_for(std::chrono::seconds(5));
+                sleep_seconds(5);
 	        }
 	    }
         return access;
